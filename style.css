@@ -1,3 +1,6 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+</style>
 /*!
 Theme Name: Departamentul de Psihologie Clinica
 Theme URI: http://underscores.me/
@@ -472,10 +475,6 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
-	background-image: linear-gradient(to bottom right, rgba(245, 245, 245, 0.8), rgba(234, 240, 249, 0.6)),
-	url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 hr {
@@ -666,6 +665,33 @@ textarea {
 	justify-content: center;
 }
 
+.site-footer {
+	/* border: 1px solid red; */
+	display: flex;
+	justify-content: center;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
+	grid-column: 1 / 5;
+	margin-bottom: 20px;
+	box-shadow: 
+	2px 2px 4px rgba(0, 0, 0, 0.1), 
+	2px -2px 4px rgba(0, 0, 0, 0.1),
+	-2px -2px 4px rgba(255, 255, 255, 0.1),
+	-2px 2px 4px rgba(255, 255, 255, 0.1);
+	padding: 5%;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.site-info {
+	font-family: Roboto, sans-serif;
+	color: rgba(0, 0, 0, 0.2);
+}
+
+.site-info a {
+	font-family: Roboto, sans-serif;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.2);
+}
 
 .site-branding {
 	/* border: 1px solid green; */
@@ -673,7 +699,6 @@ textarea {
 	grid-template-columns: 40% auto 40%;
 	/* align-items: center; */
 	max-width: 1440px;
-	min-width: 480px;
 	height: 210px;
 	margin-left: auto;
 	margin-right: auto;
@@ -734,7 +759,7 @@ textarea {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: pink;
-	font-family: Roboto:wght@700, sans-serif;
+	font-family: Roboto, sans-serif;
 	font-weight: bold;
 	font-size: 1.2em;
 	line-height:  0.8;
@@ -763,7 +788,6 @@ textarea {
 	position: relative;
 	max-height: 190px;
 	max-width: 190px;
-	overflow: visible;
 }
 /* the box in which the site title is placed - right-side*/
 .site-title-box-right {
@@ -797,7 +821,7 @@ textarea {
 .site-title-main-right {
 	text-decoration: none;
 	text-transform: uppercase;
-	color: pink;
+	color: #0F2B4C;
 	font-family: Roboto:wght@700, sans-serif;
 	font-weight: bold;
 	font-size: 1.2em;
@@ -810,18 +834,51 @@ textarea {
 }
 
 .menu-item {
-	padding: 10px 10px 10px 10px;
-	margin: 0px 1px 0px 1px;
-	font-family: Roboto, sans-serif;
+	padding: 5px 10px 5px 10px;
+	margin: 5px 10px 5px 5px;
+	font-family: Roboto:wght@900, sans-serif;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	border: solid 1px rgba(255, 255, 255, 0.5);
+	box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.2);
 }
 
 
 .menu-item:hover {
-	background: white;
-	padding: 10px 11px 10px 11px;
-	margin: 0px 0px 0px 0px;
-	box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2), -2px 0px 2px rgba(0, 0, 0, 0.2);
+	background: rgba(255, 255, 255, 0.7);
+	padding: 5px 15px 5px 15px;
+	margin: 3px 0px 3px 5px;
+	box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.4), -2px 0px 2px rgba(0, 0, 0, 0.4);
 	z-index: 99999;
+}
+
+.menu {
+	list-style: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.widget-area li {
+	/* border: 1px solid red; */
+	margin: 5px;
+	padding: 5px;
+	color: #404040;
+}
+
+.widget-area a {
+	text-decoration: none;
+	color: #404040;
+}
+
+.widget-area li:hover {
+	border: 1px solid rgba(252, 179, 64, 0.3);
+	/* border: 1px solid green; */
+	margin: 5px;
+	padding: 5px;
+	background: #FCB340;
 }
 
 /* change hover transformations in menus for smaller screens */
@@ -843,36 +900,39 @@ textarea {
 		line-height: 1.5em;
 	}
 	.site-branding {
-		/* border: 1px solid purple; */
+		border: 1px solid purple;
+		margin: 0px 20px 0px 20px;
 		display: grid;
-		grid-template-columns: 190px auto;
+		grid-template-columns: 170px auto;
 		grid-template-rows: auto auto;
 	}
 	.site-title-box-left {
-		/* border: 1px solid purple; */
-		height: 50px;
+		border: 1px solid purple;
 		grid-column: 2 / 4;
 		grid-row: 1 / 2;
-		margin: 20px 0px 5px 20px;
-		border-radius: 45em 0% 45em 0%;
-		padding: 20px 50px 20px 50px;
+		margin: 20px 20px 10px 10px;
+		border-radius: 0% 45em 0% 0%;
+		padding: 5px 5px 2px 5px;
 		background-image:  
-			linear-gradient(
-				to left, 
-				rgba(255, 255, 255, 0), 
-				rgba(255, 255, 255, 1));
-			box-shadow:
-				-2px -2px 4px rgba(0, 0, 0, 0.2), 
-				-2px 2px 4px rgba(0, 0, 0, 0.2);
+		linear-gradient(
+			to left, 
+			rgba(255, 255, 255, 0), 
+			rgba(255, 255, 255, 1));
+		box-shadow:
+			-2px -2px 4px rgba(0, 0, 0, 0.2), 
+			-2px 2px 4px rgba(0, 0, 0, 0.2);
+		min-width: 0px;
+		width: 100%;
+		max-height: 300px;
 	}
 	.site-title-box-right {
-		/* border: 1px solid purple; */
-		height: 50px;
+		border: 1px solid purple;
 		grid-column: 2 / 4;
 		grid-row: 2 / 3;
-		margin: 5px 0px 5px 20px;
-		border-radius: 0% 45em 0% 45em;
-		padding: 20px 50px 20px 50px;
+		margin: 10px 20px 20px 10px;
+		border-radius: 0% 0% 45em 0%;
+		padding: 5px 5px 5px 5px;
+		text-align: left;
 		background-image:  
 			linear-gradient(
 				to left, 
@@ -881,12 +941,28 @@ textarea {
 			box-shadow:
 				-2px -2px 4px rgba(0, 0, 0, 0.2), 
 				-2px 2px 4px rgba(0, 0, 0, 0.2);
+		min-width: 0px;
+		width: 100%;
+		max-height: 250px;
 	}
 	.custom-logo-link {
 		/* border: 1px solid purple; */
 		grid-column: 1 / 2;
 		grid-row: 1 / 3 ;
+		justify-content: center;
+		align-items: center;
 	}
+
+	.custom-logo {
+	display: flex;
+
+	border-radius:50%;
+	/* vertical-align: middle; */
+	position: relative;
+	max-height: 170px;
+	max-width: 170px;
+	overflow: visible;
+}
 
 
 }
@@ -894,9 +970,9 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 /*old animation for menu appear*/
-@keyframes menu_appear {
+/* @keyframes menu_appear {
 	from {
-		background: #EAF0F9;
+		background: #000000;
 		opacity:0.0;
 		height: 0%;
 
@@ -906,19 +982,36 @@ textarea {
 		opacity: 1;
 		height:100%;
 	}
+} */
+
+.body-container {
+	/* border: 1px solid red; */
+	width: 100%;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0% 3% 0% 3%;
 }
 
 .main-navigation {
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
 	display: block;
 	width: 100%;
-	background: #EAF0F9;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 0px -2px 2px rgba(0, 0, 0, 0.2);
-	padding-left: 5%;
+	max-width: 1440px;
+	padding: 5px;
+	background: rgba(255, 255, 255, 0.7);
+	box-shadow: 
+		2px 2px 4px rgba(0, 0, 0, 0.1), 
+		2px -2px 4px rgba(0, 0, 0, 0.1),
+		-2px -2px 4px rgba(255, 255, 255, 0.1),
+		-2px 2px 4px rgba(255, 255, 255, 0.1);
+	font-family: Roboto:wght@700, sans-serif;
+
 }
 
 .main-navigation ul {
 	display: none;
-	background: #EAF0F9;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -926,12 +1019,14 @@ textarea {
 	margin: auto;
 
 /*animation for the menu when loading page*/
-	animation-name: menu_appear;
-	animation-duration: 0.1s;
+/* 	animation-name: menu_appear;
+	animation-duration: 0.1s; */
 }
 
 
 .main-navigation ul a {
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
 	color: #1F4976;
 }
 
@@ -953,7 +1048,7 @@ textarea {
 	float: right;
 	position: absolute;
 	top: 0%;
-	right: -99%;
+	right: -105%;
 	z-index: 5000;
 }
 
@@ -962,6 +1057,7 @@ textarea {
 .main-navigation ul ul li.focus > ul {
 	display: block;
 	left: auto;
+	margin: 3px 0px 3px 15px;
 }
 
 .main-navigation ul ul a {
@@ -983,7 +1079,7 @@ textarea {
 
 .main-navigation li {
 	position: relative;
-	background:#EAF0F9
+	/* background:#EAF0F9 */
 }
 
 .main-navigation a {
@@ -1085,21 +1181,22 @@ textarea {
 
 .site-main-content {
 	/* border: 1px solid red; */
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-radius: 5px;
 	grid-column: 1 / 5;
 	margin-right: 20px;
 	margin-bottom: 20px;
 	box-shadow: 
-	2px 2px 4px rgba(0, 0, 0, 0.2), 
-	2px -2px 4px rgba(0, 0, 0, 0.2),
-	-2px -2px 4px rgba(0, 0, 0, 0.2),
-	-2px 2px 4px rgba(0, 0, 0, 0.2);
+	2px 2px 4px rgba(0, 0, 0, 0.1), 
+	2px -2px 4px rgba(0, 0, 0, 0.1),
+	-2px -2px 4px rgba(255, 255, 255, 0.1),
+	-2px 2px 4px rgba(255, 255, 255, 0.1);
 	padding: 5%;
 	background-color: rgba(255, 255, 255, 0.8);
 }
 .site-main-sidebar {
 	grid-column: 5 / 6;
-	border: 1px solid red;
+	/* border: 1px solid red; */
 }
 .post-navigation {
 	margin: 0 0 1.5em;
@@ -1189,16 +1286,35 @@ textarea {
 /* edited */
 .widget {
 	/* border: 1px solid red; */
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	display: flex;
+	flex-direction: column;
+	align-items: start;
 	border-radius: 5px;
 	margin-bottom: 20px;
 	background-color: rgba(255, 255, 255, 0.8);
 	padding: 10px 10px 20px 10px;
 	box-shadow: 
-	2px 2px 4px rgba(0, 0, 0, 0.2), 
-	2px -2px 4px rgba(0, 0, 0, 0.2),
-	-2px -2px 4px rgba(0, 0, 0, 0.2),
-	-2px 2px 4px rgba(0, 0, 0, 0.2);
+	2px 2px 4px rgba(0, 0, 0, 0.1), 
+	2px -2px 4px rgba(0, 0, 0, 0.1),
+	-2px -2px 4px rgba(255, 255, 255, 0.1),
+	-2px 2px 4px rgba(255, 255, 255, 0.1);
 
+}
+
+.widget-title {
+	/* border: 1px solid red; */
+	border-radius: 5px;
+	width: 100%;
+	margin: 0px;
+	padding: 5px 10px 5px 10px;
+	background: #1F4976;
+	box-shadow: 
+		2px 2px 4px rgba(0, 0, 0, 0.1), 
+		2px -2px 4px rgba(0, 0, 0, 0.1),
+		-2px -2px 4px rgba(255, 255, 255, 0.1),
+		-2px 2px 4px rgba(255, 255, 255, 0.1);
+	color: white;
 }
 
 .widget select {
@@ -1307,7 +1423,21 @@ textarea {
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
-	display: none;
+	display: flex;
+	/* border: 1px solid red; */
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
+	grid-column: 1 / 5;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	box-shadow: 
+	2px 2px 4px rgba(0, 0, 0, 0.1), 
+	2px -2px 4px rgba(0, 0, 0, 0.1),
+	-2px -2px 4px rgba(255, 255, 255, 0.1),
+	-2px 2px 4px rgba(255, 255, 255, 0.1);
+	padding: 5%;
+	background-color: rgba(255, 255, 255, 0.8);
+
 }
 
 /* Re-display the Theme Footer when Infinite Scroll has reached its end. */
