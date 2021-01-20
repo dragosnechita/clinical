@@ -32,6 +32,10 @@ get_header();
 			?>
 		</div>
 		<div class="site-main-sidebar">
+			<nav>
+				<?php
+					wp_nav_menu( array('container_class' => 'navigation_student', 'theme_location' => 'menu-2')); ?>
+			</nav>
 				<?php 
 				get_sidebar(); 
 				?>

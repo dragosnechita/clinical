@@ -17,8 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
@@ -30,25 +29,20 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<div class="site-title-box-left">
-				<div class='site-title-left'>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-title-main-left"><?php bloginfo( 'name' ); ?></a></p>
-				</div>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Departamentul de</br>Psihologie Clinică</br>și Psihoterapie</a></p>
 			</div>
+			<div class="logo-box">
 			<?php
 			the_custom_logo();
 				?>
-				<?php
-			$something_description = get_bloginfo( 'description', 'display' );
-			if ( $something_description || is_customize_preview() ) :
-				?>
-				<div class="site-title-box-right">
-					<div class="site-title-right">
-						<p class="site-title">
-							<a href="https://www.ubbcluj.ro/ro/" rel="UBB" class="site-title-main-right">
-							<?php echo $something_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?><a></p>
-						<?php endif; ?>
-					</div>
-				</div>
+			</div>
+			<div class="site-title-box-right">
+				<p class="site-title">
+					<a href="https://www.ubbcluj.ro/ro/" rel="UBB">
+					Universitatea </br> Babeș-Bolyai </br> din Cluj-Napoca
+					</a>
+				</p>
+			</div>
 
 			<!-- <?php
 			the_custom_logo();
@@ -72,6 +66,7 @@
 		</div><!-- .site-branding -->
 
 		<div class="body-container">
+			<a></a>
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'something' ); ?></button>
 				<?php
