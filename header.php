@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
@@ -64,19 +64,37 @@
 				<p class="site-description"><?php echo $something_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?> -->
 		</div><!-- .site-branding -->
-
-		<div class="body-container">
-			<a></a>
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'something' ); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Meniu', 'universitatea-babes-bolyai-cluj-napoca' ); ?></button>
 				<?php
 				wp_nav_menu(
 					array(
+						'container' => '',
+						'container_class' => '',
 						'theme_location' => 'menu-1',
 						'menu_id'        => 'primary-menu',
 					)
 				);
 				?>
+				<button class="menu-toggle" aria-controls="menu-studenti" aria-expanded="false"><?php esc_html_e( 'Meniu Studenti', 'universitatea-babes-bolyai-cluj-napoca' ); ?></button>
+			<nav class='meniu-studenti'>
+				<?php
+					wp_nav_menu( array(
+						'container' => '',
+						'container_class' => '', 
+						'theme_location' => 'menu-2'
+					)); ?>
+			</nav>
+			<nav>
+				<button class="menu-toggle" aria-controls="menu-cercetare" aria-expanded="false"><?php esc_html_e( 'Meniu Cercetare', 'universitatea-babes-bolyai-cluj-napoca' ); ?></button>
+				<?php
+					wp_nav_menu( array('container_class' => 'navigation-cercetare', 'theme_location' => 'menu-3')); ?>
+			</nav>
+			</nav>
+			<nav>
+				<button class="menu-toggle" aria-controls="menu-comunitate" aria-expanded="false"><?php esc_html_e( 'Meniu Comunitate', 'universitatea-babes-bolyai-cluj-napoca' ); ?></button>
+				<?php
+					wp_nav_menu( array('container_class' => 'navigation-comunitate', 'theme_location' => 'menu-4')); ?>
+			</nav>
 			</nav><!-- #site-navigation -->
-		</div>
 	</header><!-- #masthead -->

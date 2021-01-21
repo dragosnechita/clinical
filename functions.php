@@ -52,6 +52,8 @@ if ( ! function_exists( 'universitatea_babes_bolyai_cluj_napoca_setup' ) ) :
 			array(
 				'menu-1' => esc_html__( 'Primary', 'universitatea-babes-bolyai-cluj-napoca' ),
 				'menu-2' => esc_html__( 'Studenti', 'universitatea-babes-bolyai-cluj-napoca'),
+				'menu-3' => esc_html__( 'Cercetare', 'universitatea-babes-bolyai-cluj-napoca'),
+				'menu-4' => esc_html__( 'Comunitate', 'universitatea-babes-bolyai-cluj-napoca'),
 			)
 		);
 

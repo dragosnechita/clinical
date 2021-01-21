@@ -1,5 +1,29 @@
 /**
  * File navigation.js.
+
+/**
+ * Handle multiple menus on one page
+ */
+(function($){
+    $('document').ready(function(){
+        $('.main-navigation .menu-toggle').on('click', function(){
+            $(this).toggleClass('toggled');
+
+            var $nav = $(this).parents('.main-navigation'),
+                $ul = $nav.find('ul.menu');
+
+            if ($(this).hasClass('toggled')) {
+                $nav.toggleClass('toggled').attr('aria-expanded', true);
+                $ul.attr('aria-expanded', true);
+            } else {
+                $nav.toggleClass('toggled').attr('aria-expanded', false);
+                $ul.attr('aria-expanded', false);
+            }
+        });
+    });
+})(jQuery);
+
+/**
  *
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.

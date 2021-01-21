@@ -16,6 +16,8 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="site-main-menubar">
+		</div>
 		<div class="site-main-content">
 			<?php
 			while ( have_posts() ) :
@@ -32,13 +34,9 @@ get_header();
 			?>
 		</div>
 		<div class="site-main-sidebar">
-			<nav>
-				<?php
-					wp_nav_menu( array('container_class' => 'navigation_student', 'theme_location' => 'menu-2')); ?>
-			</nav>
-				<?php 
-				get_sidebar(); 
-				?>
+			<?php 
+			get_sidebar(); 
+			?>
 		</div>
 	</main><!-- #main -->
 
